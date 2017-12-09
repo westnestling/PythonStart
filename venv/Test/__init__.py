@@ -5,15 +5,16 @@ import re
 from urllib import request
 
 #抓去万年历数据
-begin = datetime.date(2017, 12, 1)
-end = datetime.date(2017, 12,25)
+begin = datetime.date(2019, 12, 1)
+end = datetime.date(2020, 12,1)
 
 url = 'http://tools.2345.com/frame/api/GetLunarInfo?date='
 # request.add_header('User-Agent','Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36')
 
-output = open('CalenderData.txt', 'w+')
+
 d = begin
 delta = datetime.timedelta(days=1)
+output = open('CalenderData'+begin.strftime("%Y%m%d")+'_'+end.strftime("%Y%m%d")+'.txt', 'w+')
 output.write("[")
 while d <= end:
     print(d.strftime("%Y%m%d"))
