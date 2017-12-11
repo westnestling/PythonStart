@@ -39,7 +39,7 @@ while d <= end:
 
     result = ["{\"time\":\"",pattern1.findall(data)[0],'\",',
               "\"chineseYear\":\"",pTGDZPattern.findall(data)[0][0:2]+'年','\",',
-              "\"TGDZ\":\"",pTGDZPattern.findall(data)[0][5:],'\",',
+              "\"era\":\"",pTGDZPattern.findall(data)[0][5:],'\",',
               "\"day\":\"",pTroYearPattern.findall(data)[0][7:],'\",',
               "\"animal\":\"",pAniPattern.findall(data)[0][-1],'\",',
               "\"nice\":\"",pYiPattern.findall(data)[0][4:-1],'\"','}']
